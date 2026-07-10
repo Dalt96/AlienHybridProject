@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>XMT_HiveGenomeReady</defName>
+    <label>геном улья стабилизирован</label>
+    <description>Все 6 ключевых мутаций органов успешно прижились и синхронизировались в теле. Биоструктура полностью готова к контролируемому гибридному метаморфозу. Исчезает, если убрать хотя бы один из необходимых органов.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.6, 0.8, 0.6)</defaultLabelColor> <!-- Цвет статуса -->
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <becomeVisible>true</becomeVisible>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

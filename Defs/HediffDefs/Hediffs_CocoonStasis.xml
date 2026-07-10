@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>XMT_CocoonStasis</defName>
+    <label>стадия хризалиды улья</label>
+    <description>Тело полностью запечатано внутри плотной органической хризалиды. Внутренние системы перестроены под нужды деления ДНК клеток. Исчезнет автоматически по завершении деления клеток.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <becomeVisible>true</becomeVisible>
+        <painFactor>0.0</painFactor>
+        <hungerRateFactor>1.0</hungerRateFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.01</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+
+    <!-- Управление слоями -->
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode</nodeClass>
+        <!--Автоматически блокирует вращение спрайта -->
+        <workerClass>PawnRenderNodeWorker_Eye</workerClass> 
+        <texPath>Things/Pawn/Effects/Cocoon</texPath>
+        <!-- Уровень отрисвоки кокона (95) -->
+        <baseLayer>95</baseLayer>
+        <shaderTypeDef>Transparent</shaderTypeDef>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+</Defs>

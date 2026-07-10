@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RecipeDef ParentName="XMT_Mutation_Surgery_Add">
+    <defName>TransformToAlienHybrid</defName>
+    <label>провести гибридную стабилизацию</label>
+    <description>Сложнейшая хирургическая операция по принудительному слиянию ДНК. Становится доступной только после полной синхронизации всех 6 мутаций органов улья. Запускает стадию контролируемого метаморфоза.</description>
+    <jobString>Stabilizing hybrid genome.</jobString>
+    <workAmount>4500</workAmount>
+    <surgerySuccessChanceFactor>0.99</surgerySuccessChanceFactor>
+    
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    
+    <addsHediff>XMT_BecomingMutant</addsHediff>
+    <dontShowIfAnyIngredientMissing>false</dontShowIfAnyIngredientMissing>
+    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineUltratech</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>XMT_Protofluid</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    
+    <fixedIngredientFilter Inherit="False">
+      <thingDefs>
+        <li>MedicineUltratech</li>
+        <li>XMT_Protofluid</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+</Defs>
