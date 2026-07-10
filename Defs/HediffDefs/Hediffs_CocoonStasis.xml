@@ -3,7 +3,7 @@
   <HediffDef>
     <defName>XMT_CocoonStasis</defName>
     <label>стадия хризалиды улья</label>
-    <description>Тело полностью запечатано внутри плотной органической хризалиды. Внутренние системы перестроены под нужды деления ДНК клеток. Исчезнет автоматически по завершении деления клеток.</description>
+    <description>Тело полностью запечатано внутри плотной органической хризалиды.</description>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.4, 0.4)</defaultLabelColor>
     <isBad>false</isBad>
@@ -21,16 +21,34 @@
       </li>
     </stages>
 
-    <!-- Управление слоями -->
     <renderNodeProperties>
+      <!-- ГЛАВНАЯ НОДА (РОДИТЕЛЬ): ВЕРХНИЙ КУПОЛ КОКОНА -->
       <li>
         <nodeClass>PawnRenderNode</nodeClass>
-        <!--Автоматически блокирует вращение спрайта -->
-        <workerClass>PawnRenderNodeWorker_Eye</workerClass> 
+        <workerClass>PawnRenderNodeWorker</workerClass>
         <texPath>Things/Pawn/Effects/Cocoon</texPath>
-        <!-- Уровень отрисвоки кокона (95) -->
-        <baseLayer>95</baseLayer>
+        <baseLayer>95</baseLayer> <!-- Поверх одеяла -->
+        
+        <!-- Теперь мы знаем точное имя поля из кода! -->
+        <drawSize>(1.4, 1.4)</drawSize> 
         <shaderTypeDef>Transparent</shaderTypeDef>
+        
+        <!-- Отключаем вращение спрайта базовым полем из дампа -->
+        <rotateIndependently>false</rotateIndependently> 
+
+        <!-- ПОД-НОДА (РЕБЕНОК): ТЕХНИЧЕСКАЯ ПОДЛОЖКА ПОД СПИНУ -->
+        <!-- Она автоматически унаследует размеры и параметры родителя, но изменит слой и текстуру -->
+        <children>
+          <li>
+            <nodeClass>PawnRenderNode</nodeClass>
+            <workerClass>PawnRenderNodeWorker</workerClass>
+            <texPath>Things/Pawn/Effects/Cocoon_Underlay</texPath>
+            <baseLayer>-1</baseLayer> <!-- Опускаем строго под тело на матрас -->
+            <shaderTypeDef>Transparent</shaderTypeDef>
+            <rotateIndependently>false</rotateIndependently>
+          </li>
+        </children>
+        
       </li>
     </renderNodeProperties>
   </HediffDef>
