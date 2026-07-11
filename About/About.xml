@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Alien Rimworld - Hybrid Project</name>
-  <author>YourName &amp; AI</author>
-  <packageId>YourName.AlienRimworld.HybridProject</packageId>
+  <author>Dalt</author>
+  <packageId>Dalt.AlienRimworld.HybridProject</packageId>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -11,8 +11,9 @@
 Adds a surgical operation called "Hybrid Stabilization" to transform a mutated human into a xenomorph hybrid. The operation requires the patient's internal organs to have already undergone mutation.  </description>
   <modDependencies>
     <li>
-      <packageId>Ogliss.Alien.Rimworld</packageId>
+      <packageId>niz.xenomorphtype</packageId>
       <displayName>Alien | Rimworld</displayName>
     </li>
   </modDependencies>
+
 </ModMetaData>
