@@ -6,7 +6,9 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Добавляет хирургическую операцию «Гибридная стабилизация» для превращения мутировавшего человека в гибрида ксеноморфа. для проведения операции требуется чтобы внутренние органы пациента уже подверглись мутации. </description>
+  <description>Добавляет хирургическую операцию «Гибридная стабилизация» для превращения мутировавшего человека в гибрида ксеноморфа. для проведения операции требуется чтобы внутренние органы пациента уже подверглись мутации.
+  
+Adds a surgical operation called "Hybrid Stabilization" to transform a mutated human into a xenomorph hybrid. The operation requires the patient's internal organs to have already undergone mutation.  </description>
   <modDependencies>
     <li>
       <packageId>Ogliss.Alien.Rimworld</packageId>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TransformToAlienHybrid.label>perform hybrid stabilization</TransformToAlienHybrid.label>
+
+  <TransformToAlienHybrid.description>A highly complex surgical operation to enforce DNA fusion. Becomes available only after full synchronization of all 6 hive organ mutations. Initiates the stage of controlled metamorphosis.</TransformToAlienHybrid.description>
+
+  <TransformToAlienHybrid.jobString>Stabilizing hybrid genome.</TransformToAlienHybrid.jobString>
+
+</Defs>

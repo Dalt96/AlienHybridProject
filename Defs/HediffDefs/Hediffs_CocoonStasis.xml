@@ -22,28 +22,23 @@
     </stages>
 
     <renderNodeProperties>
-      <!-- ГЛАВНАЯ НОДА (РОДИТЕЛЬ): ВЕРХНИЙ КУПОЛ КОКОНА -->
       <li>
         <nodeClass>PawnRenderNode</nodeClass>
         <workerClass>PawnRenderNodeWorker</workerClass>
         <texPath>Things/Pawn/Effects/Cocoon</texPath>
-        <baseLayer>95</baseLayer> <!-- Поверх одеяла -->
+        <baseLayer>95</baseLayer> 
         
-        <!-- Теперь мы знаем точное имя поля из кода! -->
         <drawSize>(1.4, 1.4)</drawSize> 
         <shaderTypeDef>Transparent</shaderTypeDef>
         
-        <!-- Отключаем вращение спрайта базовым полем из дампа -->
         <rotateIndependently>false</rotateIndependently> 
 
-        <!-- ПОД-НОДА (РЕБЕНОК): ТЕХНИЧЕСКАЯ ПОДЛОЖКА ПОД СПИНУ -->
-        <!-- Она автоматически унаследует размеры и параметры родителя, но изменит слой и текстуру -->
         <children>
           <li>
             <nodeClass>PawnRenderNode</nodeClass>
             <workerClass>PawnRenderNodeWorker</workerClass>
             <texPath>Things/Pawn/Effects/Cocoon_Underlay</texPath>
-            <baseLayer>-1</baseLayer> <!-- Опускаем строго под тело на матрас -->
+            <baseLayer>-1</baseLayer>
             <shaderTypeDef>Transparent</shaderTypeDef>
             <rotateIndependently>false</rotateIndependently>
           </li>
